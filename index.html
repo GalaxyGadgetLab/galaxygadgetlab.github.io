@@ -5,15 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GALAXY GADGET LAB</title>
     <style>
-        body { background: #000; color: #00ff00; font-family: 'Courier New', Courier, monospace; text-align: center; padding: 50px; }
-        .card { border: 2px solid #00ffcc; display: inline-block; padding: 40px; border-radius: 20px; box-shadow: 0 0 30px #00ffcc; background: rgba(0,0,0,0.8); }
-        h1 { letter-spacing: 5px; text-shadow: 2px 2px #ff00ff; margin-bottom: 10px; }
-        .lab-status { color: #ffcc00; font-weight: bold; margin-bottom: 30px; }
-        .project-list { text-align: left; margin-top: 30px; }
-        .project-item { border-left: 3px solid #ff00ff; padding-left: 15px; margin-bottom: 20px; }
-        a { color: #00ffcc; text-decoration: none; border: 1px solid #00ffcc; padding: 5px 10px; border-radius: 5px; }
-        a:hover { background: #00ffcc; color: #0b0e14; }
-    </style>
+    body { 
+        /* 真っ黒から深い宇宙の紺色へのグラデーション */
+        background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%); 
+        color: #00ffcc; 
+        font-family: 'Courier New', Courier, monospace; 
+        text-align: center; 
+        padding: 50px;
+        min-height: 100vh;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    
+    .card { 
+        /* 境界線を少しぼかして、ネオンが光っているような効果 */
+        border: 2px solid #00ffcc; 
+        display: inline-block; 
+        padding: 40px; 
+        border-radius: 20px; 
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.3), inset 0 0 15px rgba(0, 255, 204, 0.2); 
+        background: rgba(10, 15, 25, 0.9); /* 少し青みのある透過黒 */
+        max-width: 80%;
+    }
+
+    h1 { 
+        letter-spacing: 5px; 
+        /* 銀河の星々のようなキラキラしたテキストシャドウ */
+        text-shadow: 0 0 10px #00ffcc, 2px 2px 0px #ff00ff; 
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .lab-status { 
+        color: #ffcc00; 
+        font-weight: bold; 
+        margin-bottom: 30px; 
+        /* 読み込み中っぽく点滅させる演出 */
+        animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+
+    .project-item { 
+        border-left: 3px solid #ff00ff; /* 未来ガジェット風のピンク */
+        padding-left: 15px; 
+        margin-bottom: 30px; 
+        background: rgba(255, 0, 255, 0.05); /* ほんのりピンク背景 */
+        padding: 15px;
+    }
+
+    h3 { color: #ff00ff; margin-top: 0; }
+
+    a { 
+        color: #00ffcc; 
+        text-decoration: none; 
+        border: 1px solid #00ffcc; 
+        padding: 8px 15px; 
+        border-radius: 5px; 
+        transition: 0.3s;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    a:hover { 
+        background: #00ffcc; 
+        color: #0b0e14; 
+        box-shadow: 0 0 15px #00ffcc;
+    }
+</style>
 </head>
 <body>
     <div class="card">
@@ -24,7 +87,7 @@
         <div class="project-list">
             <div class="project-item">
                 <h3>銀河ガジェット1号: 黎明の観測者（Daybreak Observer）</h3>
-                <p>ESP32を用いた目覚まし時計だ．スピーカを搭載した親機を枕元に設置し，停止するための子機をリビングに設置することで，強制的にリビングへ移動することになる．共に夜明けと新時代の幕開けを観測しようじゃないかッ!．</p>
+                <p>ESP32を用いた目覚まし時計だ．スピーカを搭載した親機を枕元に設置し，停止するための子機をリビングに設置することで，強制的にリビングへ移動することになる．共に夜明けと新時代の幕開けを観測しようじゃないかッ!</p>
                 <a href="#">SYSTEM ARCHITECTURE (Coming Soon)</a>
             </div>
             </div>
